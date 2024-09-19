@@ -1,7 +1,7 @@
 ﻿// As pilhas trabalham com uma estrutura LIFO -> Last In First Out
 /* Três metodos importantes:
 Push() - > Incere um elemento no topo da pilha
-Pop() - > Remove um elemento do topo e o retorna 
+Pop() - > Remove um elemento do topo e o retorna
 Peek() - > Retorna o elemento do topo sem remove-lo
 */
 
@@ -19,4 +19,3 @@ while(Caracteres.Count > 0) {
 }
 
 Console.WriteLine(invertido);
-
