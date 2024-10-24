@@ -20,14 +20,12 @@ namespace MergeSort
             T[] right = new T[array.Length - mid]; // E a outra o lado direito
 
             // Copiando os elementos para as arrays desejadas
-            for (int i = 0; i < mid; i++) 
-            {
+            for (int i = 0; i < mid; i++) {
                 left[i] = array[i]; // Copia os primeiros 'mid' elementos para o left
             }
 
             // Copiando os elementos para o subarray right
-            for (int i = mid; i < array.Length; i++) 
-            {
+            for (int i = mid; i < array.Length; i++) {
                 right[i - mid] = array[i]; // Copia o restante dos elementos para o right
             }
 
@@ -45,8 +43,7 @@ namespace MergeSort
             int i = 0, j = 0, k = 0; // i percorre o left, j percorre o right, e k percorre result
 
             // Mesclando os arrays
-            while (i < left.Length && j < right.Length) 
-            {
+            while (i < left.Length && j < right.Length) {
                 if (left[i].CompareTo(right[j]) <= 0) // Se left[i] for menor ou igual a right[j]
                     result[k++] = left[i++]; // Copia o left[i] para o result
                 else
@@ -68,12 +65,10 @@ namespace MergeSort
         public static void Print<T>(T[] array) 
         {
             Console.Write('[');
-            foreach (T i in array) 
-            {
+            foreach (T i in array) {
                 Console.Write($"{i} ");
             }
             Console.Write(']');
-            Console.WriteLine();
         }
     }
 }
