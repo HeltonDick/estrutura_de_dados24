@@ -29,6 +29,11 @@ namespace MergeSort
                 right[i - mid] = array[i]; // Copia o restante dos elementos para o right
             }
 
+            Print(left); // PARA ORGANIZAÇÃO
+            Print(right); // PARA ORGANIZAÇÃO
+
+            Console.WriteLine(" "); // PARA ORGANIZAÇÃO
+
             // Ordenando os subarrays e mesclando
             left = Sort(left);
             right = Sort(right);
@@ -44,9 +49,10 @@ namespace MergeSort
 
             // Mesclando os arrays
             while (i < left.Length && j < right.Length) {
-                if (left[i].CompareTo(right[j]) <= 0) // Se left[i] for menor ou igual a right[j]
+                if (left[i].CompareTo(right[j]) <= 0)  // Se left[i] for menor ou igual a right[j]
                     result[k++] = left[i++]; // Copia o left[i] para o result
-                else
+                
+                else 
                     result[k++] = right[j++]; // Caso contrário, copia o right[j] para o result
             }
 
